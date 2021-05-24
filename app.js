@@ -23,3 +23,22 @@ function showTime() {
 }
 
 showTime();
+
+if (
+  localStorage.name == null ||
+  localStorage.name == "" ||
+  localStorage.name == " " ||
+  localStorage.name == undefined
+) {
+  username = prompt("Enter your nickname");
+  if (username == null || username == "" || username == " ") {
+    document.getElementById("greeting").innerHTML = `Hello`;
+  } else {
+    localStorage.name = username;
+    document.getElementById(
+      "greeting"
+    ).innerHTML = `Hello @${localStorage.name}`;
+  }
+} else {
+  document.getElementById("greeting").innerHTML = `Hello @${localStorage.name}`;
+}
