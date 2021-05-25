@@ -56,6 +56,12 @@ function settings() {
   }
 }
 
-function changeName() {
+settingsBtn = document.getElementById("settingsBtn");
+settingsBtn.addEventListener("click", () => {
+  settings();
+});
+
+option = document.getElementById("option");
+option.addEventListener("click", () => {
   myFunction();
-}
+});
