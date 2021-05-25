@@ -24,12 +24,7 @@ function showTime() {
 
 showTime();
 
-if (
-  localStorage.name == null ||
-  localStorage.name == "" ||
-  localStorage.name == " " ||
-  localStorage.name == undefined
-) {
+function myFunction() {
   username = prompt("Enter your nickname");
   if (username == null || username == "" || username == " ") {
     document.getElementById("greeting").innerHTML = `Hello`;
@@ -39,6 +34,28 @@ if (
       "greeting"
     ).innerHTML = `Hello @${localStorage.name}`;
   }
+}
+
+if (
+  localStorage.name == null ||
+  localStorage.name == "" ||
+  localStorage.name == " " ||
+  localStorage.name == undefined
+) {
+  myFunction();
 } else {
   document.getElementById("greeting").innerHTML = `Hello @${localStorage.name}`;
+}
+
+function settings() {
+  let settings = document.getElementById("settings");
+  if (settings.style.display == "block") {
+    settings.style.display = "none";
+  } else {
+    settings.style.display = "block";
+  }
+}
+
+function changeName() {
+  myFunction();
 }
